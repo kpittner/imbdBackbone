@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+  <title>Movies</title>
+  <script type="text/template" id="movieTmpl">
+    <div class="eachMovie">
+      <h2><%= title %></h2>
+      <p><%= release %></p>
+      <div><img src='<%= image %>'></div>
+      <div class="plot"><%= plot %></div>
+      <div><p class="rating">Rating: <%= rating %></p></div>
+      <button class="edit">Edit</button><button class="trash">Delete</button>
+      <div class="editMovie">
+
+      </div>
+    </div>
+  </script>
+  <script type="text/html" id="formTmpl">
+    <form action="" class="form">
+      <% if(isNew) { %>
+        <input class="formTitle" type="text" name="title" placeholder="Movie Title">
+        <br>
+        <input class="formRelease" type="text" name="releaseDate" placeholder="Release Date">
+        <input class="formRating" type="text" name="rating" placeholder="Rating">
+        <br>
+        <textarea class="formTextarea" name="plot" placeholder="Plot" rows="8" cols="41"></textarea>
+        <br>
+        <input class="formImage" type="text" name="image" placeholder="Image">
+        <br>
+        <input class="add" type="button" name="addToList" value="Add">
+      <% } else { %>
+        <input class="formTitle" type="text" name="title" placeholder="Movie Title" value="<%= title %>">
+        <br>
+        <input class="formRelease" type="text" name="releaseDate" placeholder="Release Date" value="<%= release %>">
+        <input class="formRating" type="text" name="rating" placeholder="Rating" value="<%= rating %>">
+        <br>
+        <textarea class="formTextarea" name="plot" placeholder="Plot" rows="8" cols="41" <%= plot %>></textarea>
+        <br>
+        <input class="formImage" type="text" name="image" placeholder="Image" value="<%= image %>">
+        <br>
+        <input class="submitButton" type="button" name="submit" value="Submit">
+      <% } %>
+    </form>
+  </script>
+</head>
+<header class="header">
+  <h1>Movies!</h1>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqs94pV4SaCHO4CkZAyiKf69b-1jIGeR-RT6fhB976XGuqY8Dm" alt="">
+</header>
+<body>
+  <div id = "container">
+    <div class="addMovieForm">
+
+    </div>
+  </div>
+
+
+
+  <script src="bundle.js"></script>
+
+</body>
+</html>

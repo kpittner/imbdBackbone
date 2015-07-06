@@ -1,0 +1,24 @@
+{
+  "name": "backbone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "jquery": "^2.1.4",
+    "browserify": "^10.2.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "bundle": "node_modules/.bin/browserify js/app.js -o bundle.js -d",
+    "serve": "node_modules/.bin/serve",
+    "start": "npm run bundle && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
