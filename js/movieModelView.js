@@ -33,7 +33,7 @@ module.exports = Backbone.View.extend({
   },
   add: function(event) {
     event.preventDefault();
-    this.$el.add(this.model);
+    this.$el.add().html();
   },
   render: function () {
       var markup = this.template(this.model.toJSON());

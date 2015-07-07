@@ -16,7 +16,7 @@ module.exports = Backbone.View.extend({
     this.render();
   },
   events: {
-    "submit form": "handleSubmit"
+    "submit form": "handleSubmit",
   },
   render: function() {
     var myModel = this.model.isNew() ? {} : this.model.toJSON();
